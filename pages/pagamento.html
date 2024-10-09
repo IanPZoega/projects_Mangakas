@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Pagamento</title>
+</head>
+<body>
+    <!-- Menu -->
+    <div>
+        <!-- Imagem do plano selecionada (configurar javascript) -->
+    </div>
+
+    <form action="">
+        <label>
+            <input type="radio" name="payment" value="debito_credito" required>
+            <img src="../img/logos/credit-card.png" alt="Débito/Crédito">
+            Débito/Crédito
+        </label>
+
+        <label>
+            <input type="radio" name="payment" value="boleto">
+            <img src="../img/logos/bills.png" alt="Boleto">
+            Boleto
+        </label>
+
+        <label>
+            <input type="radio" name="payment" value="pix">
+            <img src="../img/logos/pix.png" alt="Pix">
+            Pix
+        </label>
+
+        <div>
+            <button type="submit">Confirmar</button>
+            <button type="reset">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>
