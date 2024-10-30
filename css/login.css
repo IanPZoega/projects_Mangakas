@@ -1,5 +1,97 @@
 @charset 'UTF-8';
 
 body {
+    height: 100vh;
     background-color: var(--primary-color);
+    background-image: url('../img/capes/recorte_1.png'), url('../img/capes/recorte_2.png');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-top: -30px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    font-size: 1.1em;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: -5px;
+    transition: background-color 0.3s;
+}
+
+#forgot-password {
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-top: -5px; 
+    margin-bottom: 15px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
