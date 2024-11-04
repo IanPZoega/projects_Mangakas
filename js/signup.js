@@ -7,8 +7,8 @@ function changeImage() {
     if (index >= totalImages) {
         index = 0;
     }
-
+    
     images.style.transform = `translateX(${-index * 100}%)`;
 }
 
-setInterval(changeImage, 3000);
+setInterval(changeImage, 1000);
