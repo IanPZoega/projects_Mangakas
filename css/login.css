@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     transition: transform .3s ease;
 }
 
@@ -136,12 +137,20 @@ a:hover {
         margin-left: 0px;
     }
 
-    /* Para tablet */
-    @media (min-width: 600px) and (max-width: 1024px) {
-        body {
-            transform: scale(1.05);
-            background-size: 450px, 450px;
-        }
+    button {
+        margin-top: 10px;
+    }
+
+    #signup {
+        margin-bottom: -5px;
+    }
+}
+
+/* Para tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        transform: scale(1.05);
+        background-size: 450px, 450px;
     }
 }
 
