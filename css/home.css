@@ -2,6 +2,7 @@
 
 body {
     background-color: var(--background);
+    overflow-x: hidden;
 }
 
 header {
@@ -41,10 +42,6 @@ header {
 
 .image {
     min-width: 100%;
-}
-
-#recently-read {
-    
 }
 
 h1 {
