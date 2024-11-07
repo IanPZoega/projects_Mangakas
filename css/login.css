@@ -3,7 +3,7 @@
 body {
     height: 100vh;
     background-color: var(--primary-color);
-    background-image: url('../img/capes/recorte_1.png'), url('../img/capes/recorte_2.png');
+    background-image: url('../img/capes/cutout-1.png'), url('../img/capes/cutout-2.png');
     background-position: top left, bottom right;
     background-repeat: no-repeat;
     background-size: 500px;

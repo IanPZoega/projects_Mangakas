@@ -11,4 +11,4 @@ function changeImage() {
     images.style.transform = `translateX(${-index * 100}%)`;
 }
 
-setInterval(changeImage, 1000);
+setInterval(changeImage, 3000);
