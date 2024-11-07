@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform .3s ease;
 }
 
 #login {
@@ -101,4 +102,61 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Para celular até tablet */
+@media (max-width: 1024px) {
+    body {
+        background-size: 300px, 300px;
+    }
+    
+    #login {
+        padding: 15px;
+    }
+
+    #logo {
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"],
+    button {
+        width: 100%;
+    }
+
+    #forgot-password {
+        margin-left: 0px;
+    }
+
+    /* Para tablets */
+    @media (min-width: 600px) and (max-width: 1024px) {
+        body {
+            transform: scale(1.05);
+            background-size: 450px, 450px;
+        }
+    }
+}
+
+/* Para desktops até tv's */
+@media (min-width: 1024px) and (max-width: 1920px) {
+    body {
+        transform: scale(1.1);
+        background-size: 600px, 600px;
+    }
+}
+
+/* Para tv's */
+@media (min-width: 1920px) {
+    body {
+        transform: scale(1.15);
+        background-size: 750px, 750px;
+    }
 }
