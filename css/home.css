@@ -10,6 +10,7 @@ header {
     justify-content: space-around;
     gap: 20%;
     align-items: center;
+    padding-top: 10px;
 }
 
 .container {
@@ -25,6 +26,14 @@ header {
     border-radius: 15px;
 }
 
+#background {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 #carousel {
     background-color: #ffffff;
     height: 180px;
@@ -37,7 +46,7 @@ header {
 #images {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    /* height: 100%; */
+    height: 100%;
 }
 
 .image {
