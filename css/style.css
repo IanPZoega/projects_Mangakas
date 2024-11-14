@@ -1,16 +1,16 @@
 @charset 'UTF-8';
 
 :root {
-    --primary-color: #ffa11e;
-    --background: #3f3d52;
+  --primary-color: #ffa11e;
+  --background: #3f3d52;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }

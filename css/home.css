@@ -1,80 +1,107 @@
 @charset 'UTF-8';
 
 body {
-    background-color: var(--background);
-    overflow-x: hidden;
+  background-color: var(--background);
+  overflow-x: hidden;
 }
 
 header {
-    display: flex;
-    justify-content: space-around;
-    gap: 20%;
-    align-items: center;
-    padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 20%;
+  align-items: center;
+  padding-top: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+#container {
+  display: flex;
+  justify-content: center;
 }
 
 #search-bar {
-    background-color: #ffffff;
-    width: 400px;
-    display: flex;
-    padding: 6px;
-    border-radius: 15px;
+  background-color: #ffffff;
+  width: 400px;
+  display: flex;
+  padding: 6px;
+  border-radius: 15px;
 }
 
 #background {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 20px 0;
 }
 
 #carousel {
-    background-color: #ffffff;
-    height: 180px;
-    width: 350px;
-    border-radius: 15px;
-    overflow: hidden;
-    margin-top: 50px;
+  position: relative;
+  background-color: #ffffff;
+  height: 220px;
+  width: 400px;
+  max-width: 100;
+  border-radius: 15px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
 }
 
 .image {
-    min-width: 100%;
+  min-width: 60%;
+  transition: transform 0.5s;
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+.image:nth-child(2) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
 }
 
 h1 {
-    color: var(--primary-color);
-    margin-left: 10px;
+  color: var(--primary-color);
+  margin-left: 10px;
 }
 
 hr {
-    border: none;
-    height: 2px;
-    margin-bottom: 2px;
-    background-color: var(--primary-color);
+  border: none;
+  height: 2px;
+  margin-bottom: 2px;
+  background-color: var(--primary-color);
 }
 
 #recent {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 #recent img {
-    width: 100%;
-    height: 100%;
-    margin: 10px;
-    border-radius: 10px;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border-radius: 10px;
+  object-fit: cover;
 }
