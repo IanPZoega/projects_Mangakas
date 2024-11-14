@@ -20,13 +20,39 @@
       </div>
     </div>
 
-    <div id="background">
-      <div id="carousel">
-        <div id="images">
-          <img src="../img/capes/chainsaw-man-small.jpeg" alt="Capa de chainsaw man" class="image" />
-          <img src="../img/capes/gachiakuta-small.jpeg" alt="Capa de gachiakuta" class="image" />
-          <img src="../img/capes/dandadan-small.jpeg" alt="Capa de dandadan" class="image" />
-          <img src="../img/capes/kaiju-small.jpeg" alt="Capa de kaiju" class="image" />
+    <div class="background">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide">
+            <img src="../img/capes/chainsaw-man-small.jpeg" alt="Capa de chainsaw man" />
+          </div>
+          <div class="slide">
+            <img src="../img/capes/gachiakuta-small.jpeg" alt="Capa de gachiakuta" />
+          </div>
+          <div class="slide">
+            <img src="../img/capes/dandadan-small.jpeg" alt="Capa de dandadan" />
+          </div>
+          <div class="slide">
+            <img src="../img/capes/kaiju-small.jpeg" alt="Capa de kaiju" />
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="manual-navigation">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
         </div>
       </div>
     </div>
@@ -35,12 +61,13 @@
       <h1>Lidos recentemente</h1>
       <hr />
       <div id="recent">
-        <img src="../img/capes/hanako-kun.jpeg" alt="Capa de sakamoto days" />
+        <img src="../img/capes/hanako-kun.jpeg" alt="Capa de hanako kun" />
         <img src="../img/capes/tokyo-ghoul.jpeg" alt="Capa de tokyo ghoul" />
         <img src="../img/capes/bleach.jpeg" alt="Capa de bleach" />
-        <img src="../img/capes/mashle.jpeg" alt="Capa de rwby" />
+        <img src="../img/capes/mashle.jpeg" alt="Capa de mashle" />
       </div>
     </div>
+
     <script src="../js/home.js"></script>
   </body>
 </html>
