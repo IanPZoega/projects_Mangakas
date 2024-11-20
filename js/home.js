@@ -26,3 +26,18 @@ function nextImage() {
   document.getElementById('radio' + index).checked = true;
   chapter.textContent = chapterTexts[index - 1];
 }
+
+//----------------------------------------------------
+
+const sidebar = document.querySelector('div.sidebar');
+const toggleButton = document.querySelector('img#menu');
+
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  
+  if (sidebar.classList.contains ('open')) {
+    toggleButton.src = '../img/icons/menu-2.png'
+  } else {
+    toggleButton.src = '../img/icons/menu-1.png'
+  }
+});

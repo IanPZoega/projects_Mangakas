@@ -8,20 +8,21 @@ body {
 header {
   display: flex;
   justify-content: space-around;
-  gap: 20%;
+  gap: 10px;
   align-items: center;
   padding-top: 10px;
 }
 
 #menu {
+  position: relative;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
-  /* right: -250px; */
+  right: -250px;
   width: 250px;
   height: 100%;
   background-color: var(--primary-color);
@@ -30,7 +31,7 @@ header {
   justify-content: center;
   padding: 20px;
   z-index: 1;
-  transition: right 0.3s ease;
+  transition: right .3s ease;
 }
 
 .sidebar a {
@@ -47,6 +48,14 @@ header {
   background-color: var(--primary-color);
   /* padding: 5px; */
   border-radius: 5px;
+}
+
+.sidebar img {
+  margin: 0 15px;
+}
+
+.sidebar.open {
+  right: 0;
 }
 
 #container {
@@ -240,21 +249,28 @@ hr {
     padding-bottom: 15px;
   }
 
+  h1 {
+    font-size: 1.5em;
+  }
+
   .recent {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 
-/* Para tablet 
+/* Para tablet  */
 @media (min-width: 600px) and (max-width: 1024px) {
-
+  header {
+    gap: 80px;
+  }
 }
-*/
+
 
 /* De desktop até tv */
 @media (min-width: 1024px) {
   header {
     transform: scale(1.1);
+    gap: 70px;
   }
 
   #search-bar {
