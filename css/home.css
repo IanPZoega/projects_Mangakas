@@ -16,7 +16,7 @@ header {
 #menu {
   position: relative;
   cursor: pointer;
-  z-index: 2;
+  z-index: 100;
 }
 
 .sidebar {
@@ -42,11 +42,12 @@ header {
   font-weight: bolder;
   color: black;
   font-size: 1.1em;
+  transition: .3s;
 }
 
 .sidebar a:hover {
-  background-color: var(--primary-color);
-  /* padding: 5px; */
+  background-color: rgba(241, 209, 163, 0.5);
+  padding: 3px;
   border-radius: 5px;
 }
 
@@ -222,7 +223,7 @@ hr {
 @media (max-width: 600px) {
   header {
     gap: 0;
-    transform: scale(.9);
+    /* transform: scale(.9); */
   }
 
   #search-bar {
@@ -261,16 +262,15 @@ hr {
 /* Para tablet  */
 @media (min-width: 600px) and (max-width: 1024px) {
   header {
-    gap: 80px;
+    gap: 20%;
   }
 }
-
 
 /* De desktop até tv */
 @media (min-width: 1024px) {
   header {
-    transform: scale(1.1);
-    gap: 70px;
+    /* transform: scale(1.1); */
+    gap: 30%;
   }
 
   #search-bar {
@@ -281,13 +281,12 @@ hr {
     transform: scale(1.2);
     margin: 50px;
   }
-
-  /* .slider {
-    width: 600px;
-  } */
 }
 
 /* Para tv */
 @media (min-width: 1920px) {
-  
+  .background {
+    transform: scale(1.3);
+    margin: 80px;
+  }
 }
