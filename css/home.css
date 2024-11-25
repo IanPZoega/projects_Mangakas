@@ -38,7 +38,7 @@ header {
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  padding: 10px 0;
   font-weight: bolder;
   color: black;
   font-size: 1.1em;
@@ -46,9 +46,8 @@ header {
 }
 
 .sidebar a:hover {
-  background-color: rgba(241, 209, 163, 0.5);
-  padding: 3px;
-  border-radius: 5px;
+  background-color: rgba(241, 209, 163, 0.4);
+  border-radius: 10px;
 }
 
 .sidebar img {
