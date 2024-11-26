@@ -1,3 +1,4 @@
+// Carrossel
 let index = 1;
 document.getElementById('radio1').checked = true;
 const chapter = document.getElementById('chapter');
@@ -28,7 +29,7 @@ function nextImage() {
 }
 
 //----------------------------------------------------
-
+// Sidebar
 const sidebar = document.querySelector('div.sidebar');
 const toggleButton = document.querySelector('img#menu');
 
@@ -40,4 +41,12 @@ toggleButton.addEventListener('click', () => {
   } else {
     toggleButton.src = '../img/icons/menu-1.png'
   }
+});
+
+// Notifications
+const bellIcon = document.getElementById('bell');
+const notifications = document.querySelector('.notifications');
+
+bellIcon.addEventListener('click', () => {
+  notifications.classList.toggle('open');
 });

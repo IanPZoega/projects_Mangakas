@@ -13,8 +13,68 @@ header {
   padding-top: 10px;
 }
 
+#bell {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.notifications {
+  position: fixed;
+  top: 50px;
+  left: 80px;
+  width: 200px;
+  max-height: 300px;
+  background-color: var(--primary-color);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notifications h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #000;
+  text-align: center;
+}
+
+.notifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+.notifications li {
+  background-color: var(--background);
+  color: #fff;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.notifications li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Quando a barra está aberta */
+.notifications.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
 #menu {
-  position: relative;
+  /* position: fixed; */
   cursor: pointer;
   z-index: 100;
 }
@@ -205,12 +265,11 @@ hr {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 10px;
-  max-width: 97%;
 }
 
 .recent img {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin: 10px;
   border-radius: 10px;
   object-fit: cover;
