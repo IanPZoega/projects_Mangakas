@@ -72,11 +72,13 @@ input[type='submit'] {
   text-align: center;
 }
 
-.pass1, .pass2 {
+.pass1,
+.pass2 {
   position: relative;
 }
 
-.pass1 i, .pass2 i {
+.pass1 i,
+.pass2 i {
   position: absolute;
   right: 5%;
   top: 40%;
@@ -87,11 +89,14 @@ input[type='submit'] {
   display: none;
 }
 
-.pass1 input:valid ~ i, .pass2 input:valid ~ i{
+.pass1 input:valid ~ i,
+.pass2 input:valid ~ i {
   display: block;
 }
-.pass1 i.hide-btn::before, .pass2 i.hide-btn::before{
-  content: "\f070";
+
+.pass1 i.hide-btn::before,
+.pass2 i.hide-btn::before {
+  content: '\f070';
 }
 
 input[type='submit'] {

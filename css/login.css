@@ -69,11 +69,12 @@ input[type='submit'] {
   display: none;
 }
 
-.pass input:valid ~ i{
+.pass input:valid ~ i {
   display: block;
 }
-.pass i.hide-btn::before{
-  content: "\f070";
+
+.pass i.hide-btn::before {
+  content: '\f070';
 }
 
 #forgot-password {
@@ -161,10 +162,6 @@ a:hover {
   button {
     margin-top: 10px;
   }
-
-  /* #signup {
-    margin-bottom: -5px;
-  } */
 }
 
 /* Para tablet */

@@ -9,19 +9,30 @@
   </head>
   <body>
     <header>
-      <img id="bell" src="../img/icons/bell.png" alt="Notificações" width="30px" />
+      <div class="notification-container">
+        <img id="bell" src="../img/icons/bell.png" alt="Notificações" width="30px" />
+        <div class="notifications">
+          <div class="triangle"></div>
+          <h3>Notificações</h3>
+          <ul>
+            <li>
+              <img src="../img/icons/card.png" alt="Ícone de mensagem" width="25px" />
+              Mensagem 1
+            </li>
+            <li>
+              <img src="../img/icons/card.png" alt="Ícone de alerta" width="25px" />
+              Mensagem 2
+            </li>
+            <li>
+              <img src="../img/icons/card.png" alt="Ícone de sucesso" width="25px" />
+              Mensagem 3
+            </li>
+          </ul>
+        </div>
+      </div>
       <img src="../img/logos/logo_2.png" alt="Logo Mangakas" width="230px" />
       <img id="menu" src="../img/icons/menu-1.png" alt="Menu" width="30px" />
     </header>
-
-    <div class="notifications">
-      <h3>Notificações</h3>
-      <ul>
-        <li>Mensagem 1</li>
-        <li>Mensagem 2</li>
-        <li>Mensagem 3</li>
-      </ul>
-    </div>
 
     <div class="sidebar">
       <a href="#">
@@ -37,8 +48,12 @@
         Premium
       </a>
       <a href="#">
-        <img src="../img/icons/engrenagem.png" alt="Configurações" width="30px" />
+        <img src="../img/icons/gear.png" alt="Configurações" width="30px" />
         Configurações
+      </a>
+      <a href="#">
+        <img src="../img/icons/logout.png" alt="Configurações" width="30px" />
+        Sair
       </a>
     </div>
 
@@ -92,14 +107,34 @@
       <h1>Lidos recentemente</h1>
       <hr />
       <div class="recent">
-        <img src="../img/capes/hanako-kun.jpeg" alt="Capa de hanako kun" />
-        <img src="../img/capes/tokyo-ghoul.jpeg" alt="Capa de tokyo ghoul" />
-        <img src="../img/capes/bleach.jpeg" alt="Capa de bleach" />
-        <img src="../img/capes/mashle.jpeg" alt="Capa de mashle" />
-        <img src="../img/capes/attack-on-titan.jpeg" alt="Capa de attack on titan" />
-        <img src="../img/capes/soul-eater.jpeg" alt="Capa de soul eater" />
-        <img src="../img/capes/my-hero-academia.jpeg" alt="Capa my hero academia" />
-        <img src="../img/capes/dragon-ball.jpeg" alt="Capa de dragon ball" />
+        <div class="anime">
+          <img src="../img/capes/hanako-kun.jpeg" alt="Capa de hanako kun" />
+          <div class="overlay">
+            <p>Hanako-kun</p>
+            <p>Capítulo 15</p>
+          </div>
+        </div>
+        <div class="anime">
+          <img src="../img/capes/bleach.jpeg" alt="Capa de bleach" />
+          <div class="overlay">
+            <p>Bleach</p>
+            <p>Capítulo 120</p>
+          </div>
+        </div>
+        <div class="anime">
+          <img src="../img/capes/mashle.jpeg" alt="Capa de mashle" />
+          <div class="overlay">
+            <p>Mashle</p>
+            <p>Capítulo 22</p>
+          </div>
+        </div>
+        <div class="anime">
+          <img src="../img/capes/my-hero-academia.jpeg" alt="Capa de my hero academia" />
+          <div class="overlay">
+            <p>My Hero Academia</p>
+            <p>Capítulo 315</p>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -13,33 +13,36 @@ header {
   padding-top: 10px;
 }
 
+#notification-container {
+  position: relative;
+  display: inline-block;
+}
+
 #bell {
   cursor: pointer;
   z-index: 100;
 }
 
 .notifications {
-  position: fixed;
-  top: 50px;
-  left: 80px;
+  position: absolute;
+  top: 70px;
+  left: 10px;
   width: 200px;
-  max-height: 300px;
   background-color: var(--primary-color);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   z-index: 2;
+
   opacity: 0;
   pointer-events: none;
-  transform: scale(0.8);
+  transform: scale(0.8) translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .notifications h3 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #000;
   text-align: center;
 }
@@ -53,8 +56,11 @@ header {
 }
 
 .notifications li {
-  background-color: var(--background);
-  color: #fff;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
   padding: 8px;
   margin: 5px 0;
   border-radius: 5px;
@@ -66,15 +72,28 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Quando a barra está aberta */
+.notifications li img {
+  margin: 0 8px;
+}
+
+.notifications .triangle {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--primary-color);
+}
+
 .notifications.open {
   opacity: 1;
   pointer-events: auto;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
 }
 
 #menu {
-  /* position: fixed; */
   cursor: pointer;
   z-index: 100;
 }
@@ -91,7 +110,7 @@ header {
   justify-content: center;
   padding: 20px;
   z-index: 1;
-  transition: right .3s ease;
+  transition: right 0.3s ease;
 }
 
 .sidebar a {
@@ -102,11 +121,12 @@ header {
   font-weight: bolder;
   color: black;
   font-size: 1.1em;
-  transition: .3s;
+  transition: 0.3s;
+  border-radius: 8px;
 }
 
 .sidebar a:hover {
-  background-color: rgba(241, 209, 163, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
@@ -207,12 +227,15 @@ header {
 #radio1:checked ~ .first {
   margin-left: 0;
 }
+
 #radio2:checked ~ .first {
   margin-left: -100%;
 }
+
 #radio3:checked ~ .first {
   margin-left: -200%;
 }
+
 #radio4:checked ~ .first {
   margin-left: -300%;
 }
@@ -264,15 +287,55 @@ hr {
 .recent {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 10px;
 }
 
-.recent img {
+.anime {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+.anime img {
   width: 100%;
   height: auto;
-  margin: 10px;
+  display: block;
   border-radius: 10px;
+  transition: transform 0.3s ease;
   object-fit: cover;
+}
+
+.anime:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.overlay p {
+  margin: 5px 0;
+}
+
+.anime:hover .overlay {
+  height: 100%;
 }
 
 /* Media Queries */
@@ -281,7 +344,14 @@ hr {
 @media (max-width: 600px) {
   header {
     gap: 0;
-    /* transform: scale(.9); */
+  }
+
+  .notifications {
+    width: 170px;
+  }
+
+  .sidebar {
+    width: 220px;
   }
 
   #search-bar {
@@ -327,7 +397,6 @@ hr {
 /* De desktop até tv */
 @media (min-width: 1024px) {
   header {
-    /* transform: scale(1.1); */
     gap: 30%;
   }
 

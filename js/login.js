@@ -1,3 +1,4 @@
+// Esconder senha
 const passField = document.querySelector('#password');
 const showBtn = document.querySelector('#show-btn');
 
